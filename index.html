@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>dl.iitu.edu.kz: Вход на сайт</title>
+	<script src="https://kit.fontawesome.com/bb867f31e9.js"
+	        crossorigin="anonymous"></script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<main>
+		<div class="login_field">
+			<div class="site_name">
+				<h1>dl.iitu.edu.kz</h1>
+			</div>
+			<div class="main_data">
+				<div class="inputs">
+					<input type="text" id="login" placeholder="Логин">
+					<input type="text" id="password" placeholder="Пароль">
+					<div class="checkbox">
+						<input type="checkbox" name="kek" id="remember_me">
+						<label for="remember_me">Запомнить меня</label>
+					</div>
+					<button id="login_button" class="controls">Вход</button>
+					<div class="log" id="login_log"></div>
+				</div>
+				<div class="other">
+					<a href="" id="forgot">Забыли логин или пароль?</a>
+					<p style="font-size: 90%">В Вашем браузере должен быть разрешен прием cookies <i class="fa-solid fa-circle-question"></i></p>
+					<p id="lastP" style="color: #8f9294; font-size: 90%">Войти с использованием учетной записи:</p>
+					<button id="backup" class="controls"><img src="o365.png" alt="">&nbsp;&nbsp;OpenID Connect</button>
+					<div class="log" id="backup_log"></div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer>
+		<div class="footer">
+			<p>Вы не вошли в систему</p>
+			<p><a href="#" class="footer_link">В начало</a></p>
+			<p><a href="#" class="footer_link">Сводка хранения данных</a></p>
+		</div>
+	</footer>
+
+<script>
+    function login() {
+        var data = new FormData();
+        data.append("data" , "the_text_you_want_to_save");
+        var xhr = (window.XMLHttpRequest) ? new XMLHttpRequest() : new activeXObject("Microsoft.XMLHTTP");
+        xhr.open( 'post', '/path/to/php', true );
+        xhr.send(data);
+    }
+</script>
+</body>
+</html>
